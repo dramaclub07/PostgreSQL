@@ -9,7 +9,7 @@ Output:
  last_name   | character varying(20) |           |          | 
  salary      | numeric               |           | not null | 
 
-INSERT 0 1
+INSERT 0 1 
 
  employee_id | first_name | last_name | salary 
 -------------+------------+-----------+--------
@@ -51,9 +51,9 @@ Output:
 UPDATE 1
  employee_id | first_name | last_name | salary 
 -------------+------------+-----------+--------
-           2 | Priyanshu  | Singh     |  10000
+           2 | Priyanshu  | Singh     |  50000
            3 | Ayush      | Nagar     |  30000
-           1 | Abhinav    | Lather    |  50000
+           1 | Abhinav    | Lather    |  20000
 (3 rows)
 
 
@@ -64,8 +64,8 @@ Output:
 DELETE 1
  employee_id | first_name | last_name | salary 
 -------------+------------+-----------+--------
-           2 | Priyanshu  | Singh     |  10000
-           1 | Abhinav    | Lather    |  50000
+           2 | Priyanshu  | Singh     |  50000
+           1 | Abhinav    | Lather    |  20000
 (2 rows)
 
 
@@ -75,7 +75,7 @@ Query: SELECT * FROM employees WHERE salary > 15000;
 Output:
  employee_id | first_name | last_name | salary 
 -------------+------------+-----------+--------
-           1 | Abhinav    | Lather    |  50000
+           1 | Priyanshu    | Singh    |  50000
 (1 row)
 
 
