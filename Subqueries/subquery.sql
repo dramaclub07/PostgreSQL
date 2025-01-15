@@ -1,6 +1,6 @@
 Question 1
 
-**********How can you use a subquery to find employees who earn more than the average salary?**********
+--**********How can you use a subquery to find employees who earn more than the average salary?**********
 
 SELECT emp_name, emp_salary 
 FROM employees 
@@ -14,7 +14,7 @@ WHERE emp_salary > (SELECT AVG(emp_salary) FROM employees);
 
 Question 2;
 
-**********What is the difference between EXISTS and IN subqueries?**********
+--**********What is the difference between EXISTS and IN subqueries?**********
 
 SELECT emp_name 
 FROM employees e
@@ -31,7 +31,7 @@ EXISTS: Tests for the presence of rows in a subquery. It stops execution as soon
  Jyoti
 (5 rows)
 
-IN: Compares a value against a list of values returned by the subquery. It is  better suited for smaller datasets.
+IN: Compares a value against a list of values returned by the subquery. It is better suited for smaller datasets.
 
  emp_name 
 ----------
@@ -44,7 +44,7 @@ IN: Compares a value against a list of values returned by the subquery. It is  b
 
 Question 3
 
-**********How can you use a correlated subquery to find customers who have placed the most orders?**********
+.--**********How can you use a correlated subquery to find customers who have placed the most orders?**********.
 
 SELECT cust_id, COUNT(*) AS order_count 
 FROM orders o1
@@ -59,7 +59,7 @@ WHERE order_count = (
 
 Question 4
 
-**********Can you use a subquery in the FROM clause? If so, how?**********
+.--**********Can you use a subquery in the FROM clause? If so, how?**********.
 query=>Yes, subqueries in the FROM clause act as derived tables.
 
 SELECT department_name, avg_salary 
@@ -78,7 +78,7 @@ ON avg_salaries.dept_id = department.dept_id;
 
 Question 5
 
-**********How can you use a subquery to find the department with the highest average salary?**********
+.--**********How can you use a subquery to find the department with the highest average salary?**********.
 
 SELECT dept_id 
 FROM (
@@ -106,7 +106,7 @@ WHERE avg_salary = (SELECT MAX(avg_salary) FROM (
 
 Question 6;
 
-**********What are some common performance issues with subqueries?**********
+.--**********What are some common performance issues with subqueries?**********.
 
 Correlated Subqueries: Run for each row of the outer query, leading to performance degradation.
 Materialization: Subqueries in the FROM clause may create temporary tables, consuming resources.
@@ -115,13 +115,13 @@ Large Result Sets: Subqueries that return large datasets can slow down the query
 
 Question 7;
 
-**********How can you optimize a subquery to improve performance?**********
+.--**********How can you optimize a subquery to improve performance?**********.
 
 ans=>>>>  i)Use Joins Instead of Subqueries: Joins are generally faster.
 
 
 Questuion 8;
-**********Can you use a subquery within another subquery?**********
+.--**********Can you use a subquery within another subquery?**********.
 
 yes
 
@@ -145,7 +145,7 @@ WHERE emp_salary > (
 
 QUESTION 9;
 
-********** How can you use a subquery to find duplicate records in a table?**********
+--.********** How can you use a subquery to find duplicate records in a table?**********.
 
 SELECT order_name, COUNT(*) AS order_count 
 FROM orders 
@@ -160,7 +160,7 @@ HAVING COUNT(*) > 1;
 
 Question 10;
 
-*********What are some real-world examples of how subqueries are used in business applications?*********
+--.*********What are some real-world examples of how subqueries are used in business applications?*********.
 
 Employee Analysis: Identifying employees earning above the average salary.
 
