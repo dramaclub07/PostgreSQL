@@ -13,7 +13,8 @@ where salary > 50000;
 -- FROM employees
 -- WHERE salary > 50000;
 
-Q2: Benefits of using views:
+
+Question2: Benefits of using views:
 -- Simplifies complex queries by encapsulating them into a reusable object.
 -- Enhances data security by restricting direct access to underlying tables.
 -- Provides abstraction, shielding users from schema changes.
